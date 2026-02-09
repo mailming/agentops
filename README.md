@@ -290,6 +290,16 @@ response = requests.post(
 
 Connect to Purdue GenAI Studio API. See [GENAI_CONNECTION.md](GENAI_CONNECTION.md) and [examples/genai_integration.py](examples/genai_integration.py).
 
+
+### OpenClaw
+
+Install and use OpenClaw with AgentOps. See [OPENCLAW_INSTALLATION.md](OPENCLAW_INSTALLATION.md) for installation instructions.
+
+**Quick Install:**
+`ash
+pip install openclaw
+`
+
 ### CrewAI 🛶
 
 Build Crew agents with observability in just 2 lines of code. Simply set an `AGENTOPS_API_KEY` in your environment, and your crews will get automatic monitoring on the AgentOps dashboard.
