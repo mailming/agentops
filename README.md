@@ -246,6 +246,50 @@ npm install agentops @openai/agents
 - [TypeScript integration guide](https://docs.agentops.ai/v2/integrations/openai_agents_js)
 - [OpenAI Agents JS documentation](https://openai.github.io/openai-agents-js)
 
+﻿
+### Purdue GenAI Studio
+
+Connect to Purdue GenAI Studio API for on-premises LLM access. This integration allows you to use Purdue's hosted open-source models (LLaMA, DeepSeek, Qwen, etc.) with AgentOps monitoring.
+
+**Setup:**
+1. Copy .env.example to .env and add your API key
+2. See [GENAI_CONNECTION.md](GENAI_CONNECTION.md) for detailed setup instructions
+3. Check [examples/genai_integration.py](examples/genai_integration.py) for a complete example
+
+**Quick Start:**
+`python
+import os
+import requests
+import agentops
+from dotenv import load_dotenv
+
+load_dotenv()
+
+# Initialize AgentOps
+agentops.init(os.getenv("AGENTOPS_API_KEY"))
+
+# Call Purdue GenAI Studio
+API_KEY = os.getenv("PURDUE_GENAI_API_KEY")
+headers = {"Authorization": f"Bearer {API_KEY}"}
+payload = {
+    "model": "llama3.2:latest",
+    "messages": [{"role": "user", "content": "Hello!"}]
+}
+response = requests.post(
+    "https://genai.rcac.purdue.edu/api/v1/chat/completions",
+    headers=headers,
+    json=payload
+)
+`
+
+- [Full Integration Guide](GENAI_CONNECTION.md)
+- [Purdue GenAI Studio Documentation](https://www.rcac.purdue.edu/knowledge/genaistudio/api)
+
+
+### Purdue GenAI Studio
+
+Connect to Purdue GenAI Studio API. See [GENAI_CONNECTION.md](GENAI_CONNECTION.md) and [examples/genai_integration.py](examples/genai_integration.py).
+
 ### CrewAI 🛶
 
 Build Crew agents with observability in just 2 lines of code. Simply set an `AGENTOPS_API_KEY` in your environment, and your crews will get automatic monitoring on the AgentOps dashboard.
