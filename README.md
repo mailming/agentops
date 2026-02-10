@@ -300,6 +300,14 @@ Install and use OpenClaw with AgentOps. See [OPENCLAW_INSTALLATION.md](OPENCLAW_
 pip install openclaw
 `
 
+
+### OpenClaw + Purdue GenAI Integration
+
+Use OpenClaw agents with Purdue GenAI Studio as the LLM backend. See [OPENCLAW_GENAI_INTEGRATION.md](OPENCLAW_GENAI_INTEGRATION.md) for complete integration guide.
+
+- [Integration Guide](OPENCLAW_GENAI_INTEGRATION.md)
+- [Example](examples/openclaw_genai_integration.py)
+
 ### CrewAI 🛶
 
 Build Crew agents with observability in just 2 lines of code. Simply set an `AGENTOPS_API_KEY` in your environment, and your crews will get automatic monitoring on the AgentOps dashboard.
